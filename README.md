@@ -1,7 +1,9 @@
-# CODE-MONKEY-10-HOURS-TUTORIAL
-Code Monkey 10h+ tutorial (Unity)
+# CODE MONKEY 10 HOURS TUTORIAL
+
+This repo follows the 10h+ Unity tutorial by Code Monkey
 
 [Code Monkey Youtube video link](https://www.youtube.com/watch?v=AmGSEH7QcDg)
+
 00:00:00 OK - Intro, Overview
 00:12:24 OK - Final Game Preview
 00:18:13 OK - What you Should Know
