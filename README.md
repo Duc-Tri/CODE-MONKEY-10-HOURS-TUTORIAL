@@ -8,10 +8,10 @@ This repo follows the 10h+ Unity tutorial by Code Monkey
 00:12:24 OK - Final Game Preview
 00:18:13 OK - What you Should Know
 00:20:28 OK - Create Project
-00:25:21 Unity Layout
-00:32:02 Visual Studio
-00:35:39 Code Style, Naming Rules
-00:39:30 Importing Assets
+00:25:21 OK - Unity Layout
+00:32:02 OK - Visual Studio
+00:35:39 OK - Code Style, Naming Rules
+00:39:30 OK - Importing Assets
 00:41:19 Post Processing
 00:55:47 Character Controller
 01:14:50 Character Visual, Rotation
