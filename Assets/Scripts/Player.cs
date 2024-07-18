@@ -8,9 +8,8 @@ public class Player : MonoBehaviour
     [SerializeField] private float moveSpeed = 1f;
     [SerializeField] private GameInput gameInput;
 
-    public bool IsWalking => isWalking;
-
-    private bool isWalking;
+    private bool _isWalking;
+    public bool IsWalking { get => _isWalking; }
 
     private void Update()
     {
@@ -28,12 +27,18 @@ public class Player : MonoBehaviour
             inputVector.x = 1;
 
         inputVector = inputVector.normalized;
-        Vector3 moveDir = new Vector3(inputVector.x, 0, inputVector.y);
-        transform.position += moveDir * Time.deltaTime * moveSpeed;
-        float rotateSpeed = 10;
-        transform.forward = Vector3.Slerp(transform.forward, moveDir, Time.deltaTime * rotateSpeed);
+        if (inputVector != Vector2.zero)
+        {
+            _isWalking = true;
+            Vector3 moveDir = new Vector3(inputVector.x, 0, inputVector.y);
+            transform.position += moveDir * Time.deltaTime * moveSpeed;
+            float rotateSpeed = 10;
+            transform.forward = Vector3.Slerp(transform.forward, moveDir, Time.deltaTime * rotateSpeed);
 
-        Debug.Log(inputVector);
+            Debug.Log(inputVector);
+        }
+        else
+            _isWalking = false;
     }
 
     private void Update1()
@@ -43,7 +48,7 @@ public class Player : MonoBehaviour
         {
             Debug.Log("inputVector " + inputVector);
 
-            isWalking = true;
+            _isWalking = true;
 
             Vector3 moveDir = new Vector3(inputVector.x, 0, inputVector.y);
 
@@ -97,7 +102,7 @@ public class Player : MonoBehaviour
             transform.forward = Vector3.Slerp(transform.forward, moveDir, Time.deltaTime * rotateSpeed);
         }
         else
-            isWalking = false;
+            _isWalking = false;
     }
 
 }

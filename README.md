@@ -28,9 +28,10 @@ This repo follows the 10h+ Unity tutorial by Code Monkey
 			 - Time.deltaTime
 11.	01:14:50 Character Visual, Rotation<br/>
 			 - Child object doesn't move
-
-12.	01:22:59 Animations
-13.	01:42:42 Cinemachine
+12.	01:22:59 Animations<br/>
+			 - Separate Animation from logic, with new MonoBehavior
+13.	01:42:42 Cinemachine<br/>
+			 - Virtual Camera with lots of effects
 14.	01:48:32 Input System Refactor
 15.	02:04:08 Collision Detection
 16.	02:17:02 Clear Counter
