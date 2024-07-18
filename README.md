@@ -6,27 +6,27 @@ This repo follows the 10h+ Unity tutorial by Code Monkey
 
 [Code Monkey Tutorial Site](https://unitycodemonkey.com/kitchenchaoscourse.php)
 
-01.	00:00:00 Intro, Overview
+01.	00:00:00 Intro, Overview<br/>
 			 - Summary of tutorial chapters, links to website, etc.
-02.	00:12:24 Final Game Preview
+02.	00:12:24 Final Game Preview<br/>
 			 - Overcooked like demo
 03.	00:18:13 What you Should Know
-04.	00:20:28 Create Project
+04.	00:20:28 Create Project<br/>
 			 - 3D (URP), check parameters
-05.	00:25:21 Unity Layout
+05.	00:25:21 Unity Layout<br/>
 			 - Windows, Logs options
-06.	00:32:02 Visual Studio
+06.	00:32:02 Visual Studio<br/>
 			 - Package Unity, Viasfora extension, coding style
-07.	00:35:39 Code Style, Naming Rules
+07.	00:35:39 Code Style, Naming Rules<br/>
 			 - PascalCase, CamelCase, SnakeCase
 08.	00:39:30 Importing Assets
-09.	00:41:19 Post Processing
+09.	00:41:19 Post Processing<br/>
 			 - Different effects
-10.	00:55:47 Character Controller
-			 - Separate logic from visual in hierarchy
-			 - Mind the input vector magnitude
+10.	00:55:47 Character Controller<br/>
+			 - Separate logic from visual in hierarchy<br/>
+			 - Mind the input vector magnitude<br/>
 			 - Time.deltaTime
-11.	01:14:50 Character Visual, Rotation
+11.	01:14:50 Character Visual, Rotation<br/>
 			 - Child object doesn't move
 
 12.	01:22:59 Animations
