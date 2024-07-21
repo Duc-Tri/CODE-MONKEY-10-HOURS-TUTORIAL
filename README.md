@@ -32,7 +32,10 @@ This repo follows the 10h+ Unity tutorial by Code Monkey
 			 - Separate Animation from logic, with new MonoBehavior
 13.	01:42:42 Cinemachine<br/>
 			 - Virtual Camera with lots of effects
-14.	01:48:32 Input System Refactor
+14.	01:48:32 Input System Refactor<br/>
+			 - Import input package<br/>
+			 - InputActions methods<br/>
+			 - Binding for gamepad
 15.	02:04:08 Collision Detection
 16.	02:17:02 Clear Counter
 17.	02:38:18 Interact Action, C# Events

@@ -13,20 +13,8 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        Vector2 inputVector = Vector2.zero;
-        if (Input.GetKey(KeyCode.UpArrow))
-            inputVector.y = 1;
+        Vector2 inputVector = gameInput.GetMovementVectorNormalized();
 
-        if (Input.GetKey(KeyCode.DownArrow))
-            inputVector.y = -1;
-
-        if (Input.GetKey(KeyCode.LeftArrow))
-            inputVector.x = -1;
-
-        if (Input.GetKey(KeyCode.RightArrow))
-            inputVector.x = 1;
-
-        inputVector = inputVector.normalized;
         if (inputVector != Vector2.zero)
         {
             _isWalking = true;
