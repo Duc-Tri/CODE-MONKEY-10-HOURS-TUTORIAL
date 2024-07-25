@@ -37,8 +37,12 @@ This repo follows the 10h+ Unity tutorial by Code Monkey
 			 - InputActions methods<br/>
 			 - Binding for gamepad
 15.	02:04:08 Collision Detection
+			 - Physics.Raycast(), better : Physics.CapsuleCast() 
+			 - Make smooth movement while diagonaling !
 16.	02:17:02 Clear Counter
+			 - 
 17.	02:38:18 Interact Action, C# Events
+			 - 
 18.	02:47:42 Selected Counter Visual, Singleton Pattern
 19.	03:11:18 Kitchen Object, Scriptable Objects
 20.	03:24:46 Kitchen Object Parent
