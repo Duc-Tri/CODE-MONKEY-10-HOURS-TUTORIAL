@@ -40,7 +40,9 @@ This repo follows the 10h+ Unity tutorial by Code Monkey
 			 - Physics.Raycast(), better : Physics.CapsuleCast() 
 			 - Make smooth movement while diagonaling !
 16.	02:17:02 Clear Counter
-			 - 
+			 - Separate logic from visual
+			 - Dont use Tags !
+			 - Raycast / RaycastAll with Layermask
 17.	02:38:18 Interact Action, C# Events
 			 - 
 18.	02:47:42 Selected Counter Visual, Singleton Pattern

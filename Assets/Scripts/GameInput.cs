@@ -18,7 +18,7 @@ public class GameInput : MonoBehaviour
 
         // look for arrows in PlayerInputActions, which also normalize V2
 
-        Debug.Log(inputVector);
+        //Debug.Log(inputVector);
         return inputVector;
     }
 

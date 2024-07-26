@@ -7,125 +7,93 @@ public class Player : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 1f;
     [SerializeField] private GameInput gameInput;
+    [SerializeField] private LayerMask counterLayermask;
 
     private bool _isWalking;
+    private Vector3 _lastInteractDir;
+
     public bool IsWalking { get => _isWalking; }
 
     private void Update()
     {
-        Vector2 inputVector = gameInput.GetMovementVectorNormalized();
-
-        if (inputVector != Vector2.zero)
-        {
-            Vector3 moveDir = new Vector3(inputVector.x, 0, inputVector.y);
-
-            float playerRadius = .7f;
-            float playerHeight = 2f;
-            float moveDistance = Time.deltaTime * moveSpeed;
-            bool canMove = !Physics.CapsuleCast(transform.position, transform.position + Vector3.up * playerHeight, playerRadius, moveDir, moveDistance);
-
-            // cannot move towards moveDir
-            if (!canMove)
-            {
-                // attenpt only X movement
-                Vector3 moveDirX = new Vector3(moveDir.x, 0, 0).normalized;
-                canMove = !Physics.CapsuleCast(transform.position, transform.position + Vector3.up * playerHeight, playerRadius, moveDirX, moveDistance);
-
-                if (canMove)
-                    // can move only on the X
-                    moveDir = moveDirX;
-                else
-                {
-                    Vector3 moveDirZ = new Vector3(0, 0, moveDir.z).normalized;
-                    canMove = !Physics.CapsuleCast(transform.position, transform.position + Vector3.up * playerHeight, playerRadius, moveDirZ, moveDistance);
-
-                    if (canMove)
-                        // can move only on the Z
-                        moveDir = moveDirZ;
-                    else
-                    {
-                        // cannot move in any direction
-                    }
-                }
-            }
-
-            if (canMove)
-            {
-                transform.position += moveDir * moveDistance;
-            }
-
-            _isWalking = moveDir != Vector3.zero;
-            float rotateSpeed = 10;
-            transform.forward = Vector3.Slerp(transform.forward, moveDir, Time.deltaTime * rotateSpeed);
-
-            Debug.Log(inputVector);
-        }
-        else
-            _isWalking = false;
+        HandleMovement();
+        HandleInteractions();
     }
 
-    private void Update1()
+    private void HandleInteractions()
     {
         Vector2 inputVector = gameInput.GetMovementVectorNormalized();
-        if (inputVector != Vector2.zero)
+        Vector3 moveDir = new Vector3(inputVector.x, 0, inputVector.y);
+
+        if (moveDir != Vector3.zero)
         {
-            Debug.Log("inputVector " + inputVector);
-
-            _isWalking = true;
-
-            Vector3 moveDir = new Vector3(inputVector.x, 0, inputVector.y);
-
-            float playerRadius = .7f;
-            float playerHeight = 2f;
-            float moveDistance = moveSpeed * Time.deltaTime;
-            bool canMove = !Physics.CapsuleCast(transform.position,
-                transform.position + Vector3.up * playerHeight,
-                playerRadius,
-                moveDir,
-                moveDistance);
-
-            // canont move towards movedir
-            if (!canMove)
-            {
-                // attempt only X movement
-                Vector3 moveDirX = new Vector3(moveDir.x, 0, 0).normalized;
-                canMove = !Physics.CapsuleCast(transform.position,
-                   transform.position + Vector3.up * playerHeight,
-                   playerRadius,
-                   moveDirX,
-                   moveDistance);
-
-                if (canMove)
-                    moveDir = moveDirX; // can move only on X
-                else
-                {
-                    // attempt only Z movement
-                    Vector3 moveDirZ = new Vector3(0, 0, moveDir.z).normalized;
-                    canMove = !Physics.CapsuleCast(transform.position,
-                       transform.position + Vector3.up * playerHeight,
-                       playerRadius,
-                       moveDirZ,
-                       moveDistance);
-
-                    if (canMove)
-                        moveDir = moveDirZ; // can move only on Z
-                    else
-                    {
-                        // cannot move at all 
-                    }
-                }
-            }
-
-            if (canMove)
-            {
-                transform.position += moveDir * moveDistance;
-            }
-
-            float rotateSpeed = 10f;
-            transform.forward = Vector3.Slerp(transform.forward, moveDir, Time.deltaTime * rotateSpeed);
+            _lastInteractDir = moveDir;
         }
-        else
-            _isWalking = false;
+
+        float interactDistance = 2f;
+        if (Physics.Raycast(transform.position, _lastInteractDir, out RaycastHit raycasthit, interactDistance, counterLayermask))
+        {
+            Debug.Log("* " + raycasthit.transform);
+            if (raycasthit.transform.TryGetComponent(out ClearCounter clearCounter))
+            {
+                // has clearcounter
+                clearCounter.Interact();
+            }
+        }
     }
 
+    private void HandleMovement()
+    {
+        Vector2 inputVector = gameInput.GetMovementVectorNormalized();
+
+        if (inputVector == Vector2.zero)
+        {
+            _isWalking = false;
+            return;
+        }
+
+        Vector3 moveDir = new Vector3(inputVector.x, 0, inputVector.y);
+
+        float playerRadius = .7f;
+        float playerHeight = 2f;
+        float moveDistance = Time.deltaTime * moveSpeed;
+        bool canMove = !Physics.CapsuleCast(transform.position, transform.position + Vector3.up * playerHeight, playerRadius, moveDir, moveDistance);
+
+        // cannot move towards moveDir
+        if (!canMove)
+        {
+            // attenpt only X movement
+            Vector3 moveDirX = new Vector3(moveDir.x, 0, 0).normalized;
+            canMove = !Physics.CapsuleCast(transform.position, transform.position + Vector3.up * playerHeight, playerRadius, moveDirX, moveDistance);
+
+            if (canMove)
+                // can move only on the X
+                moveDir = moveDirX;
+            else
+            {
+                Vector3 moveDirZ = new Vector3(0, 0, moveDir.z).normalized;
+                canMove = !Physics.CapsuleCast(transform.position, transform.position + Vector3.up * playerHeight, playerRadius, moveDirZ, moveDistance);
+
+                if (canMove)
+                    // can move only on the Z
+                    moveDir = moveDirZ;
+                else
+                {
+                    // cannot move in any direction
+                }
+            }
+        }
+
+        if (canMove)
+        {
+            transform.position += moveDir * moveDistance;
+        }
+
+        _isWalking = moveDir != Vector3.zero;
+        float rotateSpeed = 10;
+        transform.forward = Vector3.Slerp(transform.forward, moveDir, Time.deltaTime * rotateSpeed);
+
+        //Debug.Log(inputVector);
+
+    }
 }
