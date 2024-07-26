@@ -44,7 +44,7 @@ This repo follows the 10h+ Unity tutorial by Code Monkey
 			 - Dont use Tags !
 			 - Raycast / RaycastAll with Layermask
 17.	02:38:18 Interact Action, C# Events
-			 - 
+			 - EventHandler
 18.	02:47:42 Selected Counter Visual, Singleton Pattern
 19.	03:11:18 Kitchen Object, Scriptable Objects
 20.	03:24:46 Kitchen Object Parent
