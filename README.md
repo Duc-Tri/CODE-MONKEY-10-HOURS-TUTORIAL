@@ -55,8 +55,9 @@ This repo follows the 10h+ Unity tutorial by Code Monkey
 			 - Spawn kitchen objects from counter to another counter
 21.	03:37:47 Player Pick up, C# Interfaces<br/>
 			 - Player & Counters implement same interface !
-22.	03:49:23 Container Counter
-			 
+22.	03:49:23 Container Counter<br/>
+			 - BaseCounter inheritance<br/>
+			 - Basic animator
 23.	04:13:02 Player Pick up, Drop Objects
 24.	04:23:37 Cutting Counter, Interact Alternate
 25.	04:37:10 Cutting Recipe SO
