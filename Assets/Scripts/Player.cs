@@ -67,6 +67,9 @@ public class Player : MonoBehaviour
                 if (clearCounter != selectedCounter)
                 {
                     SetSelectedCounter(clearCounter);
+
+                    if (selectedCounter != null)
+                        Debug.Log(selectedCounter);
                 }
             }
             else
@@ -75,7 +78,6 @@ public class Player : MonoBehaviour
         else
             SetSelectedCounter(null);
 
-        Debug.Log(selectedCounter);
     }
 
     private void HandleMovement()
@@ -130,7 +132,6 @@ public class Player : MonoBehaviour
         transform.forward = Vector3.Slerp(transform.forward, moveDir, Time.deltaTime * rotateSpeed);
 
         //Debug.Log(inputVector);
-
     }
 
     private void SetSelectedCounter(ClearCounter selectedCounter)

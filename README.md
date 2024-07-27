@@ -36,22 +36,23 @@ This repo follows the 10h+ Unity tutorial by Code Monkey
 			 - Import input package<br/>
 			 - InputActions methods<br/>
 			 - Binding for gamepad
-15.	02:04:08 Collision Detection
-			 - Physics.Raycast(), better : Physics.CapsuleCast() 
+15.	02:04:08 Collision Detection<br/>
+			 - Physics.Raycast(), better : Physics.CapsuleCast()<br/>
 			 - Make smooth movement while diagonaling !
-16.	02:17:02 Clear Counter
-			 - Separate logic from visual
-			 - Dont use Tags !
+16.	02:17:02 Clear Counter<br/>
+			 - Separate logic from visual<br/>
+			 - Dont use Tags !<br/>
 			 - Raycast / RaycastAll with Layermask
-17.	02:38:18 Interact Action, C# Events
+17.	02:38:18 Interact Action, C# Events<br/>
 			 - EventHandler
-18.	02:47:42 Selected Counter Visual, Singleton Pattern
-			 - Custom EventArgs
+18.	02:47:42 Selected Counter Visual, Singleton Pattern<br/>
+			 - Custom EventArgs<br/>
 			 - Awake:parent initialisations / Start:children subscriptions
-19.	03:11:18 Kitchen Object, Scriptable Objects
-			 - Instantiate
+19.	03:11:18 Kitchen Object, Scriptable Objects<br/>
+			 - Instantiate<br/>
 			 - ScriptableObjects
 20.	03:24:46 Kitchen Object Parent
+			 - Spawn kitchen objects from counter to another counter
 21.	03:37:47 Player Pick up, C# Interfaces
 22.	03:49:23 Container Counter
 23.	04:13:02 Player Pick up, Drop Objects
