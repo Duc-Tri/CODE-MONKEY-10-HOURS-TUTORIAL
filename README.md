@@ -51,10 +51,12 @@ This repo follows the 10h+ Unity tutorial by Code Monkey
 19.	03:11:18 Kitchen Object, Scriptable Objects<br/>
 			 - Instantiate<br/>
 			 - ScriptableObjects
-20.	03:24:46 Kitchen Object Parent
+20.	03:24:46 Kitchen Object Parent<br/>
 			 - Spawn kitchen objects from counter to another counter
-21.	03:37:47 Player Pick up, C# Interfaces
+21.	03:37:47 Player Pick up, C# Interfaces<br/>
+			 - Player & Counters implement same interface !
 22.	03:49:23 Container Counter
+			 
 23.	04:13:02 Player Pick up, Drop Objects
 24.	04:23:37 Cutting Counter, Interact Alternate
 25.	04:37:10 Cutting Recipe SO
