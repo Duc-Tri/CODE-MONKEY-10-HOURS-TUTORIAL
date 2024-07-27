@@ -46,7 +46,10 @@ This repo follows the 10h+ Unity tutorial by Code Monkey
 17.	02:38:18 Interact Action, C# Events
 			 - EventHandler
 18.	02:47:42 Selected Counter Visual, Singleton Pattern
+			 - Custom EventArgs
+			 - Awake:parent initialisations / Start:children subscriptions
 19.	03:11:18 Kitchen Object, Scriptable Objects
+			 -
 20.	03:24:46 Kitchen Object Parent
 21.	03:37:47 Player Pick up, C# Interfaces
 22.	03:49:23 Container Counter
