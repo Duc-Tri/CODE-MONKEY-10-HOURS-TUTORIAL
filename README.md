@@ -61,7 +61,7 @@ This repo follows the 10h+ Unity tutorial by Code Monkey
 23.	04:13:02 Player Pick up, Drop Objects
 			 - Prefab variants, with SCriptableObjects
 24.	04:23:37 Cutting Counter, Interact Alternate
-			 ----
+			 - Add more input
 25.	04:37:10 Cutting Recipe SO
 			 ----
 26.	04:46:33 Cutting Progress, World Canvas
