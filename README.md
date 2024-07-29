@@ -58,12 +58,12 @@ This repo follows the 10h+ Unity tutorial by Code Monkey
 22.	03:49:23 Container Counter<br/>
 			 - BaseCounter inheritance<br/>
 			 - Basic animator
-23.	04:13:02 Player Pick up, Drop Objects
+23.	04:13:02 Player Pick up, Drop Objects<br/>
 			 - Prefab variants, with SCriptableObjects
-24.	04:23:37 Cutting Counter, Interact Alternate
+24.	04:23:37 Cutting Counter, Interact Alternate<br/>
 			 - Add more input
-25.	04:37:10 Cutting Recipe SO
-			 ----
+25.	04:37:10 Cutting Recipe SO<br/>
+			 - Not all objects can be cut !
 26.	04:46:33 Cutting Progress, World Canvas
 			 ----
 27.	05:05:51 Look At Camera

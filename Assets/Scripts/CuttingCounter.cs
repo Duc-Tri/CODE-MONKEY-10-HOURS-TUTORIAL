@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class CuttingCounter : BaseCounter
 {
-    [SerializeField] private KitchenObjectsSO cuKitchenObjectsSO;
+    [SerializeField] private CuttingRecipeSO[] cuttingKitchenObjectsSOArray;
 
     public override void Interact(Player player)
     {
@@ -23,7 +23,11 @@ public class CuttingCounter : BaseCounter
             // player carries something
             if (player.HasKitchenObject())
             {
-                player.KitchenObject.SetKitchenObjectParent(this);
+                if (HasRecipeWithInput(player.KitchenObject.GetKitchenObjectSO()))
+                {
+                    //player carries something which can be cut
+                    player.KitchenObject.SetKitchenObjectParent(this);
+                }
                 Debug.Log("PLAYER DROP ■ " + KitchenObject);
             }
         }
@@ -31,10 +35,30 @@ public class CuttingCounter : BaseCounter
 
     public override void InteractAlternate(Player player)
     {
-        if (HasKitchenObject())
+        if (HasKitchenObject() && HasRecipeWithInput(KitchenObject.GetKitchenObjectSO()))
         {
+            // object can be cut !
+            KitchenObjectsSO output = GetOutputForInput(KitchenObject.GetKitchenObjectSO());
             KitchenObject.DestroySelf();
-            KitchenObject.SpawnKitchenObject(cuKitchenObjectsSO, this);
+
+            KitchenObject.SpawnKitchenObject(output, this);
         }
     }
+
+    private bool HasRecipeWithInput(KitchenObjectsSO kitchenObjectsSO)
+    {
+        foreach (var ckoSO in cuttingKitchenObjectsSOArray)
+            if (ckoSO.input == kitchenObjectsSO) return true;
+
+        return false;
+    }
+
+    private KitchenObjectsSO GetOutputForInput(KitchenObjectsSO inputKitchenObjectSO)
+    {
+        foreach (var ckoSO in cuttingKitchenObjectsSOArray)
+            if (ckoSO.input == inputKitchenObjectSO) return ckoSO.output;
+
+        return null;
+    }
+
 }
