@@ -161,11 +161,6 @@ public class Player : MonoBehaviour, IKitchenObjectParent
         Debug.Log(this + " ► SetKitchenObject ► " + kitchenObject);
     }
 
-    public KitchenObject GetKitchenObject()
-    {
-        return kitchenObject;
-    }
-
     public void ClearKitchenObject()
     {
         kitchenObject = null;

@@ -59,10 +59,15 @@ This repo follows the 10h+ Unity tutorial by Code Monkey
 			 - BaseCounter inheritance<br/>
 			 - Basic animator
 23.	04:13:02 Player Pick up, Drop Objects
+			 - Prefab variants, with SCriptableObjects
 24.	04:23:37 Cutting Counter, Interact Alternate
+			 ----
 25.	04:37:10 Cutting Recipe SO
+			 ----
 26.	04:46:33 Cutting Progress, World Canvas
+			 ----
 27.	05:05:51 Look At Camera
+			 ----
 28.	05:14:24 Trash Counter
 29.	05:19:33 Stove Counter, State Machine
 30.	05:56:04 Plates Counter

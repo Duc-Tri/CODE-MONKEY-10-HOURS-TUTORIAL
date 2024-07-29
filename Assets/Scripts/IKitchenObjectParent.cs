@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public interface IKitchenObjectParent 
+public interface IKitchenObjectParent
 {
     public Transform GetKitchenObjectFollowTransform();
 
