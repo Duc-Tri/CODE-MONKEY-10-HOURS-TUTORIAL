@@ -70,8 +70,10 @@ This repo follows the 10h+ Unity tutorial by Code Monkey
 			 - LateUpdate(), Camera.main is cached
 28.	05:14:24 Trash Counter<br/>
 			 - Reuse of inheritance previously done !
-29.	05:19:33 Stove Counter, State Machine
-			 ***
+29.	05:19:33 Stove Counter, State Machine<br/>
+			 - Simple States (switch)<br/>
+			 - Visual Particles Effect
+			 - Progress Bar interface with EventHandler
 30.	05:56:04 Plates Counter
 			 *
 31.	06:08:05 Plate Pick up Objects
