@@ -68,10 +68,10 @@ This repo follows the 10h+ Unity tutorial by Code Monkey
 			 - Canvas, Image.FillAmount & EventHandler
 27.	05:05:51 Look At Camera<br/>
 			 - LateUpdate(), Camera.main is cached
-28.	05:14:24 Trash Counter
-			 *
+28.	05:14:24 Trash Counter<br/>
+			 - Reuse of inheritance previously done !
 29.	05:19:33 Stove Counter, State Machine
-			 *
+			 ***
 30.	05:56:04 Plates Counter
 			 *
 31.	06:08:05 Plate Pick up Objects
