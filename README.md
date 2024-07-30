@@ -64,28 +64,48 @@ This repo follows the 10h+ Unity tutorial by Code Monkey
 			 - Add more input
 25.	04:37:10 Cutting Recipe SO<br/>
 			 - Not all objects can be cut !
-26.	04:46:33 Cutting Progress, World Canvas
-			 ----
+26.	04:46:33 Cutting Progress, World Canvas<br/>
+			 - Canvas, Image.FillAmount & EventHandler
 27.	05:05:51 Look At Camera
 			 ----
 28.	05:14:24 Trash Counter
+			 *
 29.	05:19:33 Stove Counter, State Machine
+			 *
 30.	05:56:04 Plates Counter
+			 *
 31.	06:08:05 Plate Pick up Objects
+			 *
 32.	06:22:10 Plate Complete Visual
+			 *
 33.	06:30:19 Plate World UI Icons
+			 +
 34.	06:44:24 Delivery Counter, Shader Graph
+			 +
 35.	07:05:45 Delivery Manager
+			 +
 36.	07:21:20 Delivery Manager UI
+			 +
 37.	07:39:24 Music
+			 +
 38.	07:43:22 Sound Effects
+			 #
 39.	08:06:36 Game Start
+			 #
 40.	08:21:20 Game Over
+			 #
 41.	08:30:13 Main Menu, Loading
+			 #
 42.	08:48:43 Pause, Clear Statics
+			 #
 43.	09:07:18 Options, Audio Levels
+			 @
 44.	09:22:20 Options, Key Rebinding
+			 @
 45.	09:45:29 Controller Input, Menu Navigation
+			 @
 46.	10:00:36 Polish
+			 @
 47.	10:44:01 Final Game
+			 @
 48.	10:47:30 CONGRATULATIONS!
