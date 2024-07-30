@@ -66,8 +66,8 @@ This repo follows the 10h+ Unity tutorial by Code Monkey
 			 - Not all objects can be cut !
 26.	04:46:33 Cutting Progress, World Canvas<br/>
 			 - Canvas, Image.FillAmount & EventHandler
-27.	05:05:51 Look At Camera
-			 ----
+27.	05:05:51 Look At Camera<br/>
+			 - LateUpdate(), Camera.main is cached
 28.	05:14:24 Trash Counter
 			 *
 29.	05:19:33 Stove Counter, State Machine
