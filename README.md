@@ -81,7 +81,7 @@ This repo follows the 10h+ Unity tutorial by Code Monkey
 32.	06:22:10 Plate Complete Visual<br/>
 			 - Serializable a struct to expose in editor
 33.	06:30:19 Plate World UI Icons<br/>
-			 +
+			 - Canvas UI icons, with a template (no prefab)
 34.	06:44:24 Delivery Counter, Shader Graph<br/>
 			 *
 35.	07:05:45 Delivery Manager<br/>
