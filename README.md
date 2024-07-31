@@ -76,38 +76,38 @@ This repo follows the 10h+ Unity tutorial by Code Monkey
 			 - Progress Bar interface with EventHandler
 30.	05:56:04 Plates Counter<br/>
 			 - Visual dummies different from real spawns
-31.	06:08:05 Plate Pick up Objects
+31.	06:08:05 Plate Pick up Objects<br/>
+			 - Both ways : plate on counter & ingredient on counter
+32.	06:22:10 Plate Complete Visual<br/>
 			 +
-32.	06:22:10 Plate Complete Visual
+33.	06:30:19 Plate World UI Icons<br/>
 			 +
-33.	06:30:19 Plate World UI Icons
-			 +
-34.	06:44:24 Delivery Counter, Shader Graph
+34.	06:44:24 Delivery Counter, Shader Graph<br/>
 			 *
-35.	07:05:45 Delivery Manager
+35.	07:05:45 Delivery Manager<br/>
 			 *
-36.	07:21:20 Delivery Manager UI
+36.	07:21:20 Delivery Manager UI<br/>
 			 *
-37.	07:39:24 Music
+37.	07:39:24 Music<br/>
 			 +
-38.	07:43:22 Sound Effects
+38.	07:43:22 Sound Effects<br/>
 			 +
-39.	08:06:36 Game Start
+39.	08:06:36 Game Start<br/>
 			 #
-40.	08:21:20 Game Over
+40.	08:21:20 Game Over<br/>
 			 #
-41.	08:30:13 Main Menu, Loading
+41.	08:30:13 Main Menu, Loading<br/>
 			 #
-42.	08:48:43 Pause, Clear Statics
+42.	08:48:43 Pause, Clear Statics<br/>
 			 #
-43.	09:07:18 Options, Audio Levels
+43.	09:07:18 Options, Audio Levels<br/>
 			 @
-44.	09:22:20 Options, Key Rebinding
+44.	09:22:20 Options, Key Rebinding<br/>
 			 @
-45.	09:45:29 Controller Input, Menu Navigation
+45.	09:45:29 Controller Input, Menu Navigation<br/>
 			 @
-46.	10:00:36 Polish
+46.	10:00:36 Polish<br/>
 			 @
-47.	10:44:01 Final Game
+47.	10:44:01 Final Game<br/>
 			 @
 48.	10:47:30 CONGRATULATIONS!

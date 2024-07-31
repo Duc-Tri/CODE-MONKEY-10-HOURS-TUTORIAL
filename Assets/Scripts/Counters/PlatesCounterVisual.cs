@@ -31,7 +31,7 @@ public class PlatesCounterVisual : MonoBehaviour
     {
         Transform plateVisualTransform = Instantiate(plateVisualPrefab, counterTopPoint);
 
-        float plateOffsetY = 0.2f;
+        float plateOffsetY = 0.15f;
         plateVisualTransform.localPosition = new Vector3(0, plateOffsetY * plateVisualGameObjectList.Count, 0);
         plateVisualGameObjectList.Add(plateVisualTransform.gameObject);
     }

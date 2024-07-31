@@ -2,26 +2,42 @@
 
 public class ClearCounter : BaseCounter
 {
-    [SerializeField] private KitchenObjectsSO kitchenObjectSO;
+    [SerializeField] private KitchenObjectSO kitchenObjectSO;
 
     public override void Interact(Player player)
     {
-        if (HasKitchenObject()) // some kitchen object at top
+        if (HasKitchenObject()) // === ONE OBJECT ON COUNTER
         {
-            // player carries nothing
-            if (!player.HasKitchenObject())
+            if (player.HasKitchenObject()) // --- player carries something
             {
-                KitchenObject.SetKitchenObjectParent(player);
+                if (player.KitchenObject.TryGetPlate(out PlateKitchenObject plateKitchenObject)) // ::: player has a plate !
+                {
+                    if (plateKitchenObject.TryAddIngredient(this.KitchenObject.KitchenObjectSO))
+                        this.KitchenObject.DestroySelf();
+                }
+                else // ::: player doesnt have not a plate !
+                {
+                    if (this.KitchenObject.TryGetPlate(out plateKitchenObject)) // counter has a plate !
+                        if (plateKitchenObject.TryAddIngredient(player.KitchenObject.KitchenObjectSO))
+                            player.KitchenObject.DestroySelf();
+                }
+            }
+            else // --- player carries nothing
+            {
+                this.KitchenObject.SetKitchenObjectParent(player);
                 Debug.Log("PLAYER PICKUP ■ " + KitchenObject);
             }
         }
-        else // no object on counter
+        else // === NO OBJECT ON COUNTER
         {
-            // player carries something
-            if (player.HasKitchenObject())
+            if (player.HasKitchenObject()) // --- player carries something
             {
                 player.KitchenObject.SetKitchenObjectParent(this);
                 Debug.Log("PLAYER DROP ■ " + KitchenObject);
+            }
+            else // --- player carries nothing
+            {
+
             }
         }
     }

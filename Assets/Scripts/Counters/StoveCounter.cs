@@ -117,10 +117,29 @@ public class StoveCounter : BaseCounter, IHasProgress
 
     public override void Interact(Player player)
     {
-        if (HasKitchenObject()) // some kitchen object at top
+        if (HasKitchenObject()) // === ONE OBJECT ON COUNTER
         {
-            // player carries nothing
-            if (!player.HasKitchenObject())
+            if (player.HasKitchenObject()) // --- player carries something
+            {
+                if (player.KitchenObject.TryGetPlate(out PlateKitchenObject plateKitchenObject)) // a plate !
+                {
+                    if (plateKitchenObject.TryAddIngredient(this.KitchenObject.KitchenObjectSO))
+                        KitchenObject.DestroySelf();
+
+                    state = State.Idle;
+
+                    OnStateChanged?.Invoke(this, new OnStateChangedEventArgs
+                    {
+                        State = state
+                    });
+
+                    OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs
+                    {
+                        progressNormalized = 0
+                    });
+                }
+            }
+            else // --- player carries nothing
             {
                 KitchenObject.SetKitchenObjectParent(player);
                 state = State.Idle;
@@ -138,14 +157,13 @@ public class StoveCounter : BaseCounter, IHasProgress
                 Debug.Log("PLAYER PICKUP ■ " + KitchenObject);
             }
         }
-        else // no object on counter
+        else // === NO OBJECT ON COUNTER
         {
-            // player carries something
-            if (player.HasKitchenObject())
+            if (player.HasKitchenObject()) // --- player carries something
             {
                 if (HasRecipeWithInput(player.KitchenObject.KitchenObjectSO))
                 {
-                    //player carries something which can be cut
+                    // player carries something which can be cooked
                     player.KitchenObject.SetKitchenObjectParent(this);
                     fryingRecipeSO = GetFryingRecipeSOWithInput(KitchenObject.KitchenObjectSO);
                     state = State.Frying;
@@ -166,18 +184,18 @@ public class StoveCounter : BaseCounter, IHasProgress
         }
     }
 
-    private bool HasRecipeWithInput(KitchenObjectsSO inputKitchenObjectSO)
+    private bool HasRecipeWithInput(KitchenObjectSO inputKitchenObjectSO)
     {
         return GetFryingRecipeSOWithInput(inputKitchenObjectSO) != null;
     }
 
-    private KitchenObjectsSO GetOutputForInput(KitchenObjectsSO inputKitchenObjectSO)
+    private KitchenObjectSO GetOutputForInput(KitchenObjectSO inputKitchenObjectSO)
     {
         FryingRecipeSO f = GetFryingRecipeSOWithInput(inputKitchenObjectSO);
         return (f != null) ? f.output : null;
     }
 
-    private FryingRecipeSO GetFryingRecipeSOWithInput(KitchenObjectsSO inputKitchenObjectSO)
+    private FryingRecipeSO GetFryingRecipeSOWithInput(KitchenObjectSO inputKitchenObjectSO)
     {
         foreach (var f in fryingRecipeSOArray)
             if (f.input == inputKitchenObjectSO) return f;
@@ -185,7 +203,7 @@ public class StoveCounter : BaseCounter, IHasProgress
         return null;
     }
 
-    private BurningRecipeSO GetBurningRecipeSOWithInput(KitchenObjectsSO inputKitchenObjectSO)
+    private BurningRecipeSO GetBurningRecipeSOWithInput(KitchenObjectSO inputKitchenObjectSO)
     {
         foreach (var b in burningRecipeSOArray)
             if (b.input == inputKitchenObjectSO) return b;
