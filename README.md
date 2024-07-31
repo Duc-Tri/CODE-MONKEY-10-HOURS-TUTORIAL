@@ -72,26 +72,26 @@ This repo follows the 10h+ Unity tutorial by Code Monkey
 			 - Reuse of inheritance previously done !
 29.	05:19:33 Stove Counter, State Machine<br/>
 			 - Simple States (switch)<br/>
-			 - Visual Particles Effect
+			 - Visual Particles Effect<br/>
 			 - Progress Bar interface with EventHandler
-30.	05:56:04 Plates Counter
-			 *
+30.	05:56:04 Plates Counter<br/>
+			 - Visual dummies different from real spawns
 31.	06:08:05 Plate Pick up Objects
-			 *
+			 +
 32.	06:22:10 Plate Complete Visual
-			 *
+			 +
 33.	06:30:19 Plate World UI Icons
 			 +
 34.	06:44:24 Delivery Counter, Shader Graph
-			 +
+			 *
 35.	07:05:45 Delivery Manager
-			 +
+			 *
 36.	07:21:20 Delivery Manager UI
-			 +
+			 *
 37.	07:39:24 Music
 			 +
 38.	07:43:22 Sound Effects
-			 #
+			 +
 39.	08:06:36 Game Start
 			 #
 40.	08:21:20 Game Over
