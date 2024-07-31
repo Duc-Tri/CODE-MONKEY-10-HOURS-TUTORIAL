@@ -79,7 +79,7 @@ This repo follows the 10h+ Unity tutorial by Code Monkey
 31.	06:08:05 Plate Pick up Objects<br/>
 			 - Both ways : plate on counter & ingredient on counter
 32.	06:22:10 Plate Complete Visual<br/>
-			 +
+			 - Serializable a struct to expose in editor
 33.	06:30:19 Plate World UI Icons<br/>
 			 +
 34.	06:44:24 Delivery Counter, Shader Graph<br/>
