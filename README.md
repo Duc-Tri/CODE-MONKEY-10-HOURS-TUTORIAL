@@ -83,7 +83,7 @@ This repo follows the 10h+ Unity tutorial by Code Monkey
 33.	06:30:19 Plate World UI Icons<br/>
 			 - Canvas UI icons, with a template (no prefab)
 34.	06:44:24 Delivery Counter, Shader Graph<br/>
-			 *
+			 - Shader Graph gives a lot of possibilities !
 35.	07:05:45 Delivery Manager<br/>
 			 *
 36.	07:21:20 Delivery Manager UI<br/>
