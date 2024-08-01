@@ -85,7 +85,7 @@ This repo follows the 10h+ Unity tutorial by Code Monkey
 34.	06:44:24 Delivery Counter, Shader Graph<br/>
 			 - Shader Graph gives a lot of possibilities !
 35.	07:05:45 Delivery Manager<br/>
-			 *
+			 - Smart use of ScriptableObjects
 36.	07:21:20 Delivery Manager UI<br/>
 			 *
 37.	07:39:24 Music<br/>
