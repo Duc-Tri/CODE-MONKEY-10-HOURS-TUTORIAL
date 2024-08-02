@@ -100,19 +100,20 @@ This repo follows the 10h+ Unity tutorial by Code Monkey
 			 - New TextMeshPro material !<br/>
 			 - EventHandlers, Canvas
 40.	08:21:20 Game Over<br/>
-			 #
+			 - Countdown to Game Over with Radial filled image
 41.	08:30:13 Main Menu, Loading<br/>
-			 #
+			 - Static class (instead of DontDestroyOnLoad)<br/>
+			 - Intermediate Loading Scene
 42.	08:48:43 Pause, Clear Statics<br/>
 			 #
 43.	09:07:18 Options, Audio Levels<br/>
-			 @
+			 #
 44.	09:22:20 Options, Key Rebinding<br/>
-			 @
+			 #
 45.	09:45:29 Controller Input, Menu Navigation<br/>
-			 @
+			 #
 46.	10:00:36 Polish<br/>
-			 @
+			 #
 47.	10:44:01 Final Game<br/>
-			 @
+			 #
 48.	10:47:30 CONGRATULATIONS!

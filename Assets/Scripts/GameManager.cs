@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -16,8 +14,9 @@ public class GameManager : MonoBehaviour
 
     private State state;
     private float waitingToStartTimer = 1;
-    private float countdownToStartTimer = 2;
-    private float gamePlayingTimer = 3;
+    private float countdownToStartTimer = 3;
+    private float gamePlayingTimer;
+    private float gamePlayingTimerMax = 20;
 
     private void Awake()
     {
@@ -43,6 +42,7 @@ public class GameManager : MonoBehaviour
                 if (countdownToStartTimer < 0)
                 {
                     state = State.GamePlaying;
+                    gamePlayingTimer = gamePlayingTimerMax;
                     OnStateChanged?.Invoke(this, EventArgs.Empty);
                 }
                 break;
@@ -59,7 +59,8 @@ public class GameManager : MonoBehaviour
             case State.GameOver:
                 break;
         }
-        Debug.Log("GAME MANAGER state=" + state);
+
+        //Debug.Log("GAME MANAGER state=" + state);
     }
 
     public bool IsGamePlaying => state == State.GamePlaying;
@@ -67,5 +68,9 @@ public class GameManager : MonoBehaviour
     public bool IsCountdownToStartActive => state == State.CountdownToStart;
 
     public float CountdownToStartTimer => countdownToStartTimer;
+
+    public bool IsGameOver => state == State.GameOver;
+
+    public float GamePlayingTimerNormalized => gamePlayingTimer / gamePlayingTimerMax;
 
 }
