@@ -87,7 +87,7 @@ This repo follows the 10h+ Unity tutorial by Code Monkey
 35.	07:05:45 Delivery Manager<br/>
 			 - Smart use of ScriptableObjects
 36.	07:21:20 Delivery Manager UI<br/>
-			 - Use of UI templates (everytime, destroy old & spawn new ones)
+			 - Use of UI templates (everytime, destroy old & spawn new ones)<br/>
 			 - EventHandlers all the way !
 37.	07:39:24 Music<br/>
 			 - Audio Source / Audio Listener<br/>
@@ -96,7 +96,9 @@ This repo follows the 10h+ Unity tutorial by Code Monkey
 			 - SoundManager with others particular classes<br/>
 			 - AudioSource.PlayClipAtPoint with ScriptableObjects
 39.	08:06:36 Game Start<br/>
-			 #
+			 - GameManager with states<br/>
+			 - New TextMeshPro material !<br/>
+			 - EventHandlers, Canvas
 40.	08:21:20 Game Over<br/>
 			 #
 41.	08:30:13 Main Menu, Loading<br/>
