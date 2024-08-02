@@ -90,9 +90,11 @@ This repo follows the 10h+ Unity tutorial by Code Monkey
 			 - Use of UI templates (everytime, destroy old & spawn new ones)
 			 - EventHandlers all the way !
 37.	07:39:24 Music<br/>
-			 +
+			 - Audio Source / Audio Listener<br/>
+			 - Audio Mixer
 38.	07:43:22 Sound Effects<br/>
-			 +
+			 - SoundManager with others particular classes<br/>
+			 - AudioSource.PlayClipAtPoint with ScriptableObjects
 39.	08:06:36 Game Start<br/>
 			 #
 40.	08:21:20 Game Over<br/>
