@@ -1,18 +1,22 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class DeliveryManager : MonoBehaviour
 {
-    public static DeliveryManager Instance { get;private set; }
+    public event EventHandler OnRecipeSpawned;
+    public event EventHandler OnRecipeCompleted;
+
+    public static DeliveryManager Instance { get; private set; }
 
     [SerializeField] private RecipeListSO recipeListSO;
 
-    public List<RecipeSO> waitingRecipeSOList;
+    private List<RecipeSO> waitingRecipeSOList;
 
     private float spawnRecipeTimer;
-    private float spawnRecipeTimerMax = 3;
-    private int waitingRecipesMax = 4;
+    private float spawnRecipeTimerMax = 2;
+    private int waitingRecipesMax = 7;
 
     private List<RecipeSO> possibleRecipes => recipeListSO.recipeSOList;
 
@@ -31,9 +35,12 @@ public class DeliveryManager : MonoBehaviour
             {
                 spawnRecipeTimer = spawnRecipeTimerMax;
 
-                RecipeSO waitingRecipeSO = possibleRecipes[Random.Range(0, possibleRecipes.Count)];
-                Debug.Log("waitingRecipeSO=" + waitingRecipeSO.name);
+                RecipeSO waitingRecipeSO = possibleRecipes[UnityEngine.Random.Range(0, possibleRecipes.Count)];
                 waitingRecipeSOList.Add(waitingRecipeSO);
+
+                OnRecipeSpawned?.Invoke(this, EventArgs.Empty);
+
+                Debug.Log("WAITINGRECIPESO=" + waitingRecipeSO.name);
             }
         }
     }
@@ -74,7 +81,9 @@ public class DeliveryManager : MonoBehaviour
                 {
                     // player delivered one correct recipe
                     Debug.Log("player delivered one correct recipe " + wRSO.recipeName);
+
                     waitingRecipeSOList.RemoveAt(i);
+                    OnRecipeCompleted?.Invoke(this, EventArgs.Empty);
                     return;
                 }
             }
@@ -86,4 +95,11 @@ public class DeliveryManager : MonoBehaviour
         Debug.Log("PLAYER DELIVERED INCORRECT RECIPE !!! ");
     }
 
+    public List<RecipeSO> GetWaitingRecipeSOList()
+    {
+
+        return waitingRecipeSOList;
+    }
 }
+
+

@@ -87,7 +87,8 @@ This repo follows the 10h+ Unity tutorial by Code Monkey
 35.	07:05:45 Delivery Manager<br/>
 			 - Smart use of ScriptableObjects
 36.	07:21:20 Delivery Manager UI<br/>
-			 *
+			 - Use of UI templates (everytime, destroy old & spawn new ones)
+			 - EventHandlers all the way !
 37.	07:39:24 Music<br/>
 			 +
 38.	07:43:22 Sound Effects<br/>
