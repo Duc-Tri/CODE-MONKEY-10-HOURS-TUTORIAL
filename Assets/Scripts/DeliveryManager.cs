@@ -16,7 +16,7 @@ public class DeliveryManager : MonoBehaviour
 
     private List<RecipeSO> waitingRecipeSOList;
 
-    private float spawnRecipeTimer;
+    private float spawnRecipeTimer = 0; // to be negative immediately
     private float spawnRecipeTimerMax = 2;
     private int waitingRecipesMax = 7;
     private int successulRecipesAmount;
@@ -31,7 +31,7 @@ public class DeliveryManager : MonoBehaviour
 
     private void Update()
     {
-        if (waitingRecipeSOList.Count < waitingRecipesMax)
+        if (GameManager.Instance.IsGamePlaying && waitingRecipeSOList.Count < waitingRecipesMax)
         {
             spawnRecipeTimer -= Time.deltaTime;
             if (spawnRecipeTimer < 0)

@@ -111,9 +111,13 @@ This repo follows the 10h+ Unity tutorial by Code Monkey
 44.	09:22:20 Options, Key Rebinding<br/>
 			 - Use of PlayerInputActions functions
 45.	09:45:29 Controller Input, Menu Navigation<br/>
-			 #
+			 - Use of EventSystem & PlayerInputActions
 46.	10:00:36 Polish<br/>
-			 #
+			 - Particles for footsteps
+			 - TutorialUI with keys (not done)
+			 - Animation & Sound for countdown (not completed)
+			 - Stove Burn Warning, UI with animation & sound (not done)
+			 - UI for delivered meals (correct & incorrect) (not done)
 47.	10:44:01 Final Game<br/>
-			 #
+			 - Summary of all features learned
 48.	10:47:30 CONGRATULATIONS!
