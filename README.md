@@ -107,7 +107,7 @@ This repo follows the 10h+ Unity tutorial by Code Monkey
 42.	08:48:43 Pause, Clear Statics<br/>
 			 - Static events keep subscribers between scence loads !
 43.	09:07:18 Options, Audio Levels<br/>
-			 
+			 - Save with PlayerPrefs
 44.	09:22:20 Options, Key Rebinding<br/>
 			 #
 45.	09:45:29 Controller Input, Menu Navigation<br/>
