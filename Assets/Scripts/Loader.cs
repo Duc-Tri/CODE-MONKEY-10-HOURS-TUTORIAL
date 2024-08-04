@@ -12,7 +12,7 @@ public static class Loader
     public static void Load(Scene targetScene)
     {
         Loader.targetScene = targetScene;
-        
+
         SceneManager.LoadScene(Scene.LoadingScene.ToString());
     }
 
