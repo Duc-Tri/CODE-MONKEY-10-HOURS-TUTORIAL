@@ -109,7 +109,7 @@ This repo follows the 10h+ Unity tutorial by Code Monkey
 43.	09:07:18 Options, Audio Levels<br/>
 			 - Save with PlayerPrefs
 44.	09:22:20 Options, Key Rebinding<br/>
-			 #
+			 - Use of PlayerInputActions functions
 45.	09:45:29 Controller Input, Menu Navigation<br/>
 			 #
 46.	10:00:36 Polish<br/>
